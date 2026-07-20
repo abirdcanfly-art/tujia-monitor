@@ -15,7 +15,8 @@ body{background:#f0f4f8;font-family:-apple-system,"PingFang SC","Microsoft YaHei
 .card{background:#fff;border-radius:12px;border:1px solid #e8edf3;margin-bottom:14px;overflow:hidden}
 .card-hd{padding:12px 16px;font-size:13px;font-weight:600;color:#1e293b;display:flex;align-items:center;gap:8px}
 .card-tag{display:inline-block;background:#ecfdf5;color:#059669;font-size:11px;padding:2px 8px;border-radius:16px;font-weight:600}
-table{width:100%;border-collapse:collapse}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;min-width:560px}
 th{text-align:left;padding:6px 8px;font-size:10px;font-weight:600;color:#94a3b8;border-bottom:1px solid #eef2f6;white-space:nowrap}
 td{padding:5px 8px;font-size:11px;border-bottom:1px solid #f1f5f9;vertical-align:middle;line-height:1.3}
 tr:last-child td{border:none}
@@ -42,6 +43,21 @@ tr.self .price{color:#059669;font-weight:600}
 .info-item{background:#fff;border:1px solid #e8edf3;border-radius:10px;padding:8px 14px;font-size:12px}
 .info-item .label{color:#94a3b8;font-size:10px;margin-bottom:1px}
 .info-item .val{color:#1e293b;font-weight:600}
+
+@media(max-width:768px){
+body{padding:10px 12px}
+.flex-wrap{flex-direction:column;gap:0}
+.header h1{font-size:16px}
+.card-hd{padding:10px 12px;font-size:12px}
+td,th{padding:4px 5px;font-size:10px}
+.name{max-width:100px;font-size:10px}
+.price{font-size:10px}
+.bar-wrap{height:18px}
+.bar{height:12px}
+.bar-val{font-size:9px;left:6px}
+.info-bar{gap:8px}
+.info-item{font-size:11px;padding:6px 10px}
+}
 </style>
 </head>
 <body>
@@ -104,11 +120,11 @@ tr.self .price{color:#059669;font-weight:600}
     card.className = 'card';
     card.innerHTML =
       '<div class="card-hd"><span class="card-tag">' + g.group + '</span>' + (g.title || '对标组 ' + g.group) + '</div>' +
-      '<table><thead><tr>' +
+      '<div class="table-wrap"><table><thead><tr>' +
       '<th style="width:28px">#</th><th>房型</th>' +
       '<th style="width:26%">月均价<sup title="全量日期算术平均价">?</sup></th>' +
       '<th style="width:48px">平日</th><th style="width:48px">周五</th><th style="width:48px">周六</th>' +
-      '</tr></thead><tbody>' + rows + '</tbody></table>';
+      '</tr></thead><tbody>' + rows + '</tbody></table></div>';
     cards.push(card);
   });
 
