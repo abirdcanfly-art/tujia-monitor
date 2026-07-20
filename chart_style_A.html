@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>样式A - 标签在柱上</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f5f5f5;font-family:"Microsoft YaHei",sans-serif;padding:20px}
+.section{background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:24px;padding:20px}
+.title{font-size:18px;font-weight:600;color:#333;margin-bottom:12px}
+.chart{width:100%;height:300px}
+.hint{text-align:center;color:#bbb;font-size:12px;padding:16px}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div class="hint">数据来源：途家 App API | 黄色=本品 灰色=竞品</div>
+<script>
+var G = [{"group": "1606", "rooms": [{"name": "【壹】长隆欢乐世界 长隆野生动物园 大马戏 长隆地铁站 loft双床房", "type": "本品", "monthlyAvg": 268, "weekday": 245, "friday": 289, "saturday": 310}, {"name": "天河城楼上 lofo复式双床套房 双床长隆一站近地铁", "type": "竞品", "monthlyAvg": 286, "weekday": 268, "friday": 302, "saturday": 325}, {"name": "【华悦居】复式亲子套房，步行长隆景区15分钟", "type": "竞品", "monthlyAvg": 236, "weekday": 218, "friday": 250, "saturday": 278}, {"name": "轻奢复式双床套房*长隆地铁口*步行15分钟长隆动物园", "type": "竞品", "monthlyAvg": 234, "weekday": 210, "friday": 255, "saturday": 280}]}, {"group": "1019", "rooms": [{"name": "【叁】近长隆欢乐世界 动物园 大马戏 loft三床房 投影广交会", "type": "本品", "monthlyAvg": 341, "weekday": 312, "friday": 368, "saturday": 395}, {"name": "广州长隆景区·秋日奶油独立两居室可住6人投影", "type": "竞品", "monthlyAvg": 334, "weekday": 305, "friday": 358, "saturday": 382}, {"name": "骑士/走路到长隆/双地铁/广交会/南站/亲子loft", "type": "竞品", "monthlyAvg": 338, "weekday": 310, "friday": 365, "saturday": 385}, {"name": "拾光长隆地铁口广交会灰系投影Loft两房", "type": "竞品", "monthlyAvg": 375, "weekday": 340, "friday": 395, "saturday": 420}, {"name": "华悦居公寓复式两房三床家庭套房", "type": "竞品", "monthlyAvg": 237, "weekday": 220, "friday": 250, "saturday": 275}, {"name": "【無-拾陌美宿】长隆地铁口独立三床奶油风巨幕投影", "type": "竞品", "monthlyAvg": 240, "weekday": 222, "friday": 260, "saturday": 285}, {"name": "投影滑滑梯波波池乐两房一厅三床两卫陆", "type": "竞品", "monthlyAvg": 448, "weekday": 410, "friday": 480, "saturday": 510}, {"name": "洮源居奶油复式三床房+巨幕投影+洗衣机", "type": "竞品", "monthlyAvg": 209, "weekday": 195, "friday": 218, "saturday": 240}]}, {"group": "1707", "rooms": [{"name": "【贰】近长隆欢乐世界 动物园 大马戏 loft双床房 投影", "type": "本品", "monthlyAvg": 302, "weekday": 280, "friday": 325, "saturday": 350}, {"name": "可直播可住宿独特装修汉溪万博商圈近长隆", "type": "竞品", "monthlyAvg": 409, "weekday": 375, "friday": 435, "saturday": 460}, {"name": "广州宠伴猫咖式民宿近汉溪长隆ins奶油风", "type": "竞品", "monthlyAvg": 313, "weekday": 290, "friday": 335, "saturday": 358}, {"name": "私享家服务式公寓复式悠享大床房", "type": "竞品", "monthlyAvg": 187, "weekday": 172, "friday": 198, "saturday": 220}, {"name": "广州长隆景区·轻奢风投影与55寸电视房", "type": "竞品", "monthlyAvg": 298, "weekday": 275, "friday": 318, "saturday": 345}, {"name": "拾光长隆地铁口近南站投影秋千吊床复式", "type": "竞品", "monthlyAvg": 379, "weekday": 348, "friday": 402, "saturday": 430}, {"name": "【梵小姐の屋】长隆欢乐世界对面豪华", "type": "竞品", "monthlyAvg": 330, "weekday": 305, "friday": 352, "saturday": 378}, {"name": "洮源居精品双大床房+巨幕投影+洗衣机", "type": "竞品", "monthlyAvg": 197, "weekday": 182, "friday": 210, "saturday": 235}, {"name": "宫崎峻之家/长隆动物园对面/汉溪长隆双地铁口", "type": "竞品", "monthlyAvg": 245, "weekday": 228, "friday": 262, "saturday": 288}]}];
+var S = ['对标组 1606 - 复式45m2 可住3人','对标组 1019 - 复式46m2 可住6人','对标组 1707 - 复式46m2 可住4人'];
+
+G.forEach(function(g,i){
+  var sec = document.createElement('div');
+  sec.className = 'section';
+  sec.innerHTML = '<div class="title">'+S[i]+'</div><div class="chart"></div>';
+  document.getElementById('app').appendChild(sec);
+
+  var sorted = g.rooms.slice().sort(function(a,b){return b.monthlyAvg-a.monthlyAvg});
+  var names = sorted.map(function(r){return (r.type==='本品'?'* ':'  ')+r.name.slice(0,26)});
+  var vals = sorted.map(function(r){return r.monthlyAvg});
+  var cols = sorted.map(function(r){return r.type==='本品'?'#F5A623':'#B0B8C4'});
+
+  var chart = echarts.init(sec.querySelector('.chart'));
+  chart.setOption({
+    tooltip:{trigger:'axis',axisPointer:{type:'shadow'},formatter:function(p){
+      var r=sorted[p[0].dataIndex];return '<b>'+r.name+'</b><br/>月均价: ¥'+r.monthlyAvg+'<br/>平日价: ¥'+r.weekday+'<br/>周五价: ¥'+r.friday+'<br/>周六价: ¥'+r.saturday;
+    }},
+    grid:{left:10,right:200,top:10,bottom:10},
+    xAxis:{type:'value',axisLabel:{formatter:'¥{value}'}},
+    yAxis:{type:'category',data:names,axisLabel:{fontSize:11,width:150,overflow:'truncate'}},
+    series:[{
+      type:'bar',data:vals.map(function(v,i){return{value:v,itemStyle:{color:cols[i]}}}),barWidth:20,
+      label:{show:true,position:'right',formatter:function(p){
+        var r=sorted[p.dataIndex];return '平¥'+r.weekday+'  五¥'+r.friday+'  六¥'+r.saturday;
+      },fontSize:10,color:'#666'}
+    }]
+  });
+  window.addEventListener('resize',function(){chart.resize()});
+});
+
+</script>
+</body>
+</html>

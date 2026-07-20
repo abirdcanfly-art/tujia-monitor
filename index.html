@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>竞品价格对标 · 途家民宿监测</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f0f4f8;font-family:-apple-system,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;padding:16px 20px;color:#1a202c}
+.flex-wrap{display:flex;gap:16px;align-items:flex-start}
+.flex-col{flex:1;min-width:0}
+.header{margin-bottom:12px}
+.header h1{font-size:17px;font-weight:700;color:#1e293b}
+.header .sub{font-size:12px;color:#94a3b8;margin-top:2px}
+.card{background:#fff;border-radius:12px;border:1px solid #e8edf3;margin-bottom:14px;overflow:hidden}
+.card-hd{padding:12px 16px;font-size:13px;font-weight:600;color:#1e293b;display:flex;align-items:center;gap:8px}
+.card-tag{display:inline-block;background:#ecfdf5;color:#059669;font-size:11px;padding:2px 8px;border-radius:16px;font-weight:600}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;padding:6px 8px;font-size:10px;font-weight:600;color:#94a3b8;border-bottom:1px solid #eef2f6;white-space:nowrap}
+td{padding:5px 8px;font-size:11px;border-bottom:1px solid #f1f5f9;vertical-align:middle;line-height:1.3}
+tr:last-child td{border:none}
+tr.self{background:#ecfdf5}
+tr.self + tr.self td{border-top:1px solid #a7f3d0}
+tr:hover td{background:#f8fafc}
+tr.self:hover td{background:#d1fae5}
+.rank{text-align:center;width:28px}
+.badge{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:6px;font-size:10px;font-weight:700;color:#fff}
+.badge-other{background:#cbd5e1}
+.badge-self{background:#059669}
+.name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#334155;max-width:160px;font-size:11px}
+sup{display:inline-flex;align-items:center;justify-content:center;width:12px;height:12px;border-radius:50%;background:#e2e8f0;color:#64748b;font-size:8px;font-weight:600;cursor:help;margin-left:3px}
+.bar-cell{position:relative}
+.bar-wrap{display:flex;align-items:center;height:22px;position:relative;padding-left:2px}
+.bar{height:14px;border-radius:4px;background:linear-gradient(90deg,#60a5fa,#3b82f6);min-width:4px;transition:width .4s ease}
+tr.self .bar{background:linear-gradient(90deg,#34d399,#10b981)}
+.bar-val{position:absolute;left:8px;font-size:10px;font-weight:600;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.2)}
+.price{text-align:right;font-size:11px;color:#475569;white-space:nowrap}
+tr.self .price{color:#059669;font-weight:600}
+.error{text-align:center;padding:40px;color:#ef4444;font-size:14px}
+.footer{text-align:center;color:#94a3b8;font-size:11px;padding:4px 0 16px;letter-spacing:.3px}
+.info-bar{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.info-item{background:#fff;border:1px solid #e8edf3;border-radius:10px;padding:8px 14px;font-size:12px}
+.info-item .label{color:#94a3b8;font-size:10px;margin-bottom:1px}
+.info-item .val{color:#1e293b;font-weight:600}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>竞品价格对标</h1>
+  <div class="sub">途家民宿价格监测</div>
+</div>
+<div id="info"></div>
+<div id="app">
+  <div class="error" id="loading">加载中...</div>
+</div>
+<div class="footer">数据来源：途家 App API · 每日自动采集</div>
+<script>
+;(async function(){
+  var resp = await fetch('chart_data.json');
+  if (!resp.ok) {
+    document.getElementById('loading').textContent = 'chart_data.json 加载失败';
+    return;
+  }
+  var DATA = await resp.json();
+  document.getElementById('loading').style.display = 'none';
+
+  var dr = DATA.date_range || {};
+  var lw = DATA.latest_week || {};
+  document.getElementById('info').innerHTML =
+    '<div class="info-bar">' +
+    '<div class="info-item"><div class="label">数据范围</div><div class="val">' + (dr.start || '?') + ' ~ ' + (dr.end || '?') + '</div></div>' +
+    '<div class="info-item"><div class="label">最新一周</div><div class="val">' + (lw.start || '?') + ' ~ ' + (lw.end || '?') + '</div></div>' +
+    '</div>';
+
+  var groups = DATA.groups || [];
+
+  var wrap = document.createElement('div');
+  wrap.className = 'flex-wrap';
+  var left = document.createElement('div');
+  left.className = 'flex-col';
+  var right = document.createElement('div');
+  right.className = 'flex-col';
+  var cards = [];
+
+  groups.forEach(function(g){
+    var sorted = g.rooms.slice().sort(function(a,b){return b.monthlyAvg - a.monthlyAvg});
+    var maxVal = sorted[0].monthlyAvg || 1;
+    var rows = '';
+    sorted.forEach(function(r, i){
+      var pct = r.monthlyAvg / maxVal * 100;
+      var isSelf = r.type === '本品';
+      var rc = isSelf ? ' class="self"' : '';
+      var badgeCls = isSelf ? 'badge-self' : 'badge-other';
+      rows += '<tr' + rc + '>' +
+        '<td class="rank"><span class="badge ' + badgeCls + '">' + (i+1) + '</span></td>' +
+        '<td class="name" title="' + r.name.replace(/"/g,'&quot;') + '">' + r.name + '</td>' +
+        '<td class="bar-cell"><div class="bar-wrap"><div class="bar" style="width:' + pct.toFixed(1) + '%"></div><span class="bar-val">¥' + r.monthlyAvg + '</span></div></td>' +
+        '<td class="price">' + (r.weekday ? '¥' + r.weekday : '-') + '</td>' +
+        '<td class="price">' + (r.friday ? '¥' + r.friday : '-') + '</td>' +
+        '<td class="price">' + (r.saturday ? '¥' + r.saturday : '-') + '</td>' +
+        '</tr>';
+    });
+    var card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML =
+      '<div class="card-hd"><span class="card-tag">' + g.group + '</span>' + (g.title || '对标组 ' + g.group) + '</div>' +
+      '<table><thead><tr>' +
+      '<th style="width:28px">#</th><th>房型</th>' +
+      '<th style="width:26%">月均价<sup title="全量日期算术平均价">?</sup></th>' +
+      '<th style="width:48px">平日</th><th style="width:48px">周五</th><th style="width:48px">周六</th>' +
+      '</tr></thead><tbody>' + rows + '</tbody></table>';
+    cards.push(card);
+  });
+
+  // 1606 + 1019 左列, 1707 右列
+  if (groups.length >= 3) {
+    left.appendChild(cards[0]);
+    left.appendChild(cards[2]);
+    right.appendChild(cards[1]);
+    wrap.appendChild(left);
+    wrap.appendChild(right);
+    document.getElementById('app').appendChild(wrap);
+  } else {
+    cards.forEach(function(c){ document.getElementById('app').appendChild(c); });
+  }
+})();
+</script>
+</body>
+</html>

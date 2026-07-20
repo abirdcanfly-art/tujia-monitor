@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>竞品对标 · 途家民宿价格监测</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f0f2f5;font-family:-apple-system,"PingFang SC","Microsoft YaHei","Helvetica Neue",sans-serif;padding:24px;color:#1a202c}
+.card{background:#fff;border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,0.08);margin-bottom:20px;overflow:hidden}
+.card-header{padding:16px 20px;font-size:15px;font-weight:600;color:#2d3748;border-bottom:1px solid #e2e8f0;background:#fafbfc}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;padding:10px 8px;font-size:12px;font-weight:600;color:#718096;border-bottom:2px solid #e2e8f0;white-space:nowrap}
+td{padding:8px;font-size:13px;border-bottom:1px solid #edf2f7;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr.self{background:#EBF8FF}
+tr.self td{border-bottom-color:#BEE3F8}
+tr:hover td{background:#F7FAFC}
+tr.self:hover td{background:#E2E8F0}
+.rank{text-align:center;width:44px}
+.rank-num{display:inline-block;width:22px;height:22px;line-height:22px;text-align:center;border-radius:6px;color:#fff;font-size:11px;font-weight:700}
+.name{max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13px;color:#2d3748;padding-right:16px}
+.bar-cell{position:relative}
+.bar-wrap{display:flex;align-items:center;height:28px;position:relative}
+.bar{height:20px;border-radius:4px;min-width:4px;transition:width 0.3s}
+.bar-label{position:absolute;left:12px;font-size:12px;font-weight:600;color:#1a202c;text-shadow:0 0 4px #fff,0 0 4px #fff}
+.price{text-align:right;font-size:13px;font-weight:500;color:#4a5568;white-space:nowrap}
+tr.self .price{color:#2B6CB0;font-weight:600}
+.footer{text-align:center;color:#a0aec0;font-size:12px;padding:16px 0}
+</style>
+</head>
+<body>
+
+        <div class="card">
+            <div class="card-header">对标组 1606 · 复式·45m² 可住3人</div>
+            <table>
+                <thead><tr>
+                    <th style="width:44px">排名</th>
+                    <th>民宿房型名</th>
+                    <th style="width:35%">月均价</th>
+                    <th style="width:64px">平日价</th>
+                    <th style="width:64px">周五价</th>
+                    <th style="width:64px">周六价</th>
+                </tr></thead>
+                <tbody>
+            <tr class="">
+                <td class="rank"><span class="rank-num" style="background:#A0AEC0">1</span></td>
+                <td class="name">天河城楼上 lofo复式双床套房 双床长隆一站近地铁</td>
+                <td class="bar-cell">
+                    <div class="bar-wrap">
+                        <div class="bar" style="width:100.0%;background:#CBD5E0"></div>
+                        <span class="bar-label">¥286</span>
+                    </div>
+                </td>
+                <td class="price">¥268</td>
+                <td class="price">¥302</td>
+                <td class="price">¥325</td>
+            </tr>
+            <tr class="self">
+                <td class="rank"><span class="rank-num" style="background:#2B6CB0">2</span></td>
+                <td class="name">【壹】长隆欢乐世界 长隆野生动物园 大马戏 长隆地铁站 loft双床房</td>
+                <td class="bar-cell">
+                    <div class="bar-wrap">
+                        <div class="bar" style="width:93.7%;background:#2B6CB0"></div>
+                        <span class="bar-label">¥268</span>
+                    </div>
+                </td>
+                <td class="price">¥245</td>
+                <td class="price">¥289</td>
+                <td class="price">¥310</td>
+            </tr>
+            <tr class="">
+                <td class="rank"><span class="rank-num" style="background:#A0AEC0">3</span></td>
+                <td class="name">【华悦居】复式亲子套房，步行长隆景区15分钟</td>
+                <td class="bar-cell">
+                    <div class="bar-wrap">
+                        <div class="bar" style="width:82.5%;background:#CBD5E0"></div>
+                        <span class="bar-label">¥236</span>
+                    </div>
+                </td>
+                <td class="price">¥218</td>
+                <td class="price">¥250</td>
+                <td class="price">¥278</td>
+            </tr>
+            <tr class="">
+                <td class="rank"><span class="rank-num" style="background:#A0AEC0">4</span></td>
+                <td class="name">轻奢复式双床套房*长隆地铁口*步行15分钟长隆动物园</td>
+                <td class="bar-cell">
+                    <div class="bar-wrap">
+                        <div class="bar" style="width:81.8%;background:#CBD5E0"></div>
+                        <span class="bar-label">¥234</span>
+                    </div>
+                </td>
+                <td class="price">¥210</td>
+                <td class="price">¥255</td>
+                <td class="price">¥280</td>
+            </tr></tbody>
+            </table>
+        </div>
+        <div class="card">
+            <div class="card-header">对标组 1019 · 复式·46m² 可住6人</div>
+            <table>
+                <thead><tr>
+                    <th style="width:44px">排名</th>
+                    <th>民宿房型名</th>
+                    <th style="width:35%">月均价</th>
+                    <th style="width:64px">平日价</th>
+                    <th style="width:64px">周五价</th>
+                    <th style="width:64px">周六价</th>
+                </tr></thead>
+                <tbody>
+            <tr class="">
+                <td class="rank"><span class="rank-num" style="background:#A0AEC0">1</span></td>
+                <td class="name">投影滑滑梯波波池乐两房一厅三床两卫陆</td>
+                <td class="bar-cell">
+                    <div class="bar-wrap">
+                        <div class="bar" style="width:100.0%;background:#CBD5E0"></div>
+                        <span class="bar-label">¥448</span>
+                    </div>
+                </td>
+                <td class="price">¥410</td>
+                <td class="price">¥480</td>
+                <td class="price">¥510</td>
+            </tr>
+            <tr class="">
+                <td class="rank"><span class="rank-num" style="background:#A0AEC0">2</span></td>
+                <td class="name">拾光长隆地铁口广交会灰系投影Loft两房</td>
+                <td class="bar-cell">
+                    <div class="bar-wrap">
+                        <div class="bar" style="width:83.7%;background:#CBD5E0"></div>
+                        <span class="bar-label">¥375</span>
+                    </div>
+                </td>
+                <td class="price">¥340</td>
+                <td class="price">¥395</td>
+                <td class="price">¥420</td>
+            </tr>
+            <tr class="self">
+                <td class="rank"><span class="rank-num" style="background:#2B6CB0">3</span></td>
+                <td class="name">【叁】近长隆欢乐世界 动物园 大马戏 loft三床房 投影广交会</td>
+                <td class="bar-cell">
+                    <div class="bar-wrap">
+                        <div class="bar" style="width:76.1%;background:#2B6CB0"></div>
+                        <span class="bar-label">¥341</span>
+                    </div>
+                </td>
+                <td class="price">¥312</td>
+                <td class="price">¥368</td>
+                <td class="price">¥395</td>
+            </tr>
+            <tr class="">
+                <td class="rank"><span class="rank-num" style="background:#A0AEC0">4</span></td>
+                <td class="name">骑士/走路到长隆/双地铁/广交会/南站/亲子loft</td>
+                <td class="bar-cell">
+                    <div class="bar-wrap">
+                        <div class="bar" style="width:75.4%;background:#CBD5E0"></div>
+                        <span class="bar-label">¥338</span>
+                    </div>
+                </td>
+                <td class="price">¥310</td>
+                <td class="price">¥365</td>
+                <td class="price">¥385</td>
+            </tr>
+            <tr class="">
+                <td class="rank"><span class="rank-num" style="background:#A0AEC0">5</span></td>
+                <td class="name">广州长隆景区·秋日奶油独立两居室可住6人投影</td>
+                <td class="bar-cell">
+                    <div class="bar-wrap">
+                        <div class="bar" style="width:74.6%;background:#CBD5E0"></div>
+                        <span class="bar-label">¥334</span>
+                    </div>
+                </td>
+                <td class="price">¥305</td>
+                <td class="price">¥358</td>
+                <td class="price">¥382</td>
+            </tr>
+            <tr class="">
+                <td class="rank"><span class="rank-num" style="background:#A0AEC0">6</span></td>
+                <td class="name">【無-拾陌美宿】长隆地铁口独立三床奶油风巨幕投影</td>
+                <td class="bar-cell">
+                    <div class="bar-wrap">
+                        <div class="bar" style="width:53.6%;background:#CBD5E0"></div>
+                        <span class="bar-label">¥240</span>
+                    </div>
+                </td>
+                <td class="price">¥222</td>
+                <td class="price">¥260</td>
+                <td class="price">¥285</td>
+            </tr>
+            <tr class="">
+                <td class="rank"><span class="rank-num" style="background:#A0AEC0">7</span></td>
+                <td class="name">华悦居公寓复式两房三床家庭套房</td>
+                <td class="bar-cell">
+                    <div class="bar-wrap">
+                        <div class="bar" style="width:52.9%;background:#CBD5E0"></div>
+                        <span class="bar-label">¥237</span>
+                    </div>
+                </td>
+                <td class="price">¥220</td>
+                <td class="price">¥250</td>
+                <td class="price">¥275</td>
+            </tr>
+            <tr class="">
+                <td class="rank"><span class="rank-num" style="background:#A0AEC0">8</span></td>
+                <td class="name">洮源居奶油复式三床房+巨幕投影+洗衣机</td>
+                <td class="bar-cell">
+                    <div class="bar-wrap">
+                        <div class="bar" style="width:46.7%;background:#CBD5E0"></div>
+                        <span class="bar-label">¥209</span>
+                    </div>
+                </td>
+                <td class="price">¥195</td>
+                <td class="price">¥218</td>
+                <td class="price">¥240</td>
+            </tr></tbody>
+            </table>
+        </div>
+        <div class="card">
+            <div class="card-header">对标组 1707 · 复式·46m² 可住4人</div>
+            <table>
+                <thead><tr>
+                    <th style="width:44px">排名</th>
+                    <th>民宿房型名</th>
+                    <th style="width:35%">月均价</th>
+                    <th style="width:64px">平日价</th>
+                    <th style="width:64px">周五价</th>
+                    <th style="width:64px">周六价</th>
+                </tr></thead>
+                <tbody>
+            <tr class="">
+                <td class="rank"><span class="rank-num" style="background:#A0AEC0">1</span></td>
+                <td class="name">可直播可住宿独特装修汉溪万博商圈近长隆</td>
+                <td class="bar-cell">
+                    <div class="bar-wrap">
+                        <div class="bar" style="width:100.0%;background:#CBD5E0"></div>
+                        <span class="bar-label">¥409</span>
+                    </div>
+                </td>
+                <td class="price">¥375</td>
+                <td class="price">¥435</td>
+                <td class="price">¥460</td>
+            </tr>
+            <tr class="">
+                <td class="rank"><span class="rank-num" style="background:#A0AEC0">2</span></td>
+                <td class="name">拾光长隆地铁口近南站投影秋千吊床复式</td>
+                <td class="bar-cell">
+                    <div class="bar-wrap">
+                        <div class="bar" style="width:92.7%;background:#CBD5E0"></div>
+                        <span class="bar-label">¥379</span>
+                    </div>
+                </td>
+                <td class="price">¥348</td>
+                <td class="price">¥402</td>
+                <td class="price">¥430</td>
+            </tr>
+            <tr class="">
+                <td class="rank"><span class="rank-num" style="background:#A0AEC0">3</span></td>
+                <td class="name">【梵小姐の屋】长隆欢乐世界对面豪华</td>
+                <td class="bar-cell">
+                    <div class="bar-wrap">
+                        <div class="bar" style="width:80.7%;background:#CBD5E0"></div>
+                        <span class="bar-label">¥330</span>
+                    </div>
+                </td>
+                <td class="price">¥305</td>
+                <td class="price">¥352</td>
+                <td class="price">¥378</td>
+            </tr>
+            <tr class="">
+                <td class="rank"><span class="rank-num" style="background:#A0AEC0">4</span></td>
+                <td class="name">广州宠伴猫咖式民宿近汉溪长隆ins奶油风</td>
+                <td class="bar-cell">
+                    <div class="bar-wrap">
+                        <div class="bar" style="width:76.5%;background:#CBD5E0"></div>
+                        <span class="bar-label">¥313</span>
+                    </div>
+                </td>
+                <td class="price">¥290</td>
+                <td class="price">¥335</td>
+                <td class="price">¥358</td>
+            </tr>
+            <tr class="self">
+                <td class="rank"><span class="rank-num" style="background:#2B6CB0">5</span></td>
+                <td class="name">【贰】近长隆欢乐世界 动物园 大马戏 loft双床房 投影</td>
+                <td class="bar-cell">
+                    <div class="bar-wrap">
+                        <div class="bar" style="width:73.8%;background:#2B6CB0"></div>
+                        <span class="bar-label">¥302</span>
+                    </div>
+                </td>
+                <td class="price">¥280</td>
+                <td class="price">¥325</td>
+                <td class="price">¥350</td>
+            </tr>
+            <tr class="">
+                <td class="rank"><span class="rank-num" style="background:#A0AEC0">6</span></td>
+                <td class="name">广州长隆景区·轻奢风投影与55寸电视房</td>
+                <td class="bar-cell">
+                    <div class="bar-wrap">
+                        <div class="bar" style="width:72.9%;background:#CBD5E0"></div>
+                        <span class="bar-label">¥298</span>
+                    </div>
+                </td>
+                <td class="price">¥275</td>
+                <td class="price">¥318</td>
+                <td class="price">¥345</td>
+            </tr>
+            <tr class="">
+                <td class="rank"><span class="rank-num" style="background:#A0AEC0">7</span></td>
+                <td class="name">宫崎峻之家/长隆动物园对面/汉溪长隆双地铁口</td>
+                <td class="bar-cell">
+                    <div class="bar-wrap">
+                        <div class="bar" style="width:59.9%;background:#CBD5E0"></div>
+                        <span class="bar-label">¥245</span>
+                    </div>
+                </td>
+                <td class="price">¥228</td>
+                <td class="price">¥262</td>
+                <td class="price">¥288</td>
+            </tr>
+            <tr class="">
+                <td class="rank"><span class="rank-num" style="background:#A0AEC0">8</span></td>
+                <td class="name">洮源居精品双大床房+巨幕投影+洗衣机</td>
+                <td class="bar-cell">
+                    <div class="bar-wrap">
+                        <div class="bar" style="width:48.2%;background:#CBD5E0"></div>
+                        <span class="bar-label">¥197</span>
+                    </div>
+                </td>
+                <td class="price">¥182</td>
+                <td class="price">¥210</td>
+                <td class="price">¥235</td>
+            </tr>
+            <tr class="">
+                <td class="rank"><span class="rank-num" style="background:#A0AEC0">9</span></td>
+                <td class="name">私享家服务式公寓复式悠享大床房</td>
+                <td class="bar-cell">
+                    <div class="bar-wrap">
+                        <div class="bar" style="width:45.7%;background:#CBD5E0"></div>
+                        <span class="bar-label">¥187</span>
+                    </div>
+                </td>
+                <td class="price">¥172</td>
+                <td class="price">¥198</td>
+                <td class="price">¥220</td>
+            </tr></tbody>
+            </table>
+        </div>
+<div class="footer">数据来源：途家 App API · 每日自动采集</div>
+</body>
+</html>
