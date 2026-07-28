@@ -82,6 +82,7 @@ td,th{padding:4px 5px;font-size:10px}
 
   var dr = DATA.date_range || {};
   var lw = DATA.latest_week || {};
+  var monthLabel = DATA.month_label || '月均价';
   document.getElementById('info').innerHTML =
     '<div class="info-bar">' +
     '<div class="info-item"><div class="label">数据范围</div><div class="val">' + (dr.start || '?') + ' ~ ' + (dr.end || '?') + '</div></div>' +
@@ -122,7 +123,7 @@ td,th{padding:4px 5px;font-size:10px}
       '<div class="card-hd"><span class="card-tag">' + g.group + '</span>' + (g.title || '对标组 ' + g.group) + '</div>' +
       '<div class="table-wrap"><table><thead><tr>' +
       '<th style="width:28px">#</th><th>房型</th>' +
-      '<th style="width:26%">月均价<sup title="全量日期算术平均价">?</sup></th>' +
+      '<th style="width:26%">' + monthLabel + '<sup title="当月累计数据算术平均价">?</sup></th>' +
       '<th style="width:48px">平日</th><th style="width:48px">周五</th><th style="width:48px">周六</th>' +
       '</tr></thead><tbody>' + rows + '</tbody></table></div>';
     cards.push(card);
