@@ -10,7 +10,7 @@
           "type": "竞品",
           "monthlyAvg": 421,
           "monthLabel": "7月",
-          "weekday": 430,
+          "weekday": 454,
           "friday": 411,
           "saturday": 411
         },
@@ -30,7 +30,7 @@
           "type": "竞品",
           "monthlyAvg": 267,
           "monthLabel": "7月",
-          "weekday": 253,
+          "weekday": 260,
           "friday": 297,
           "saturday": 314
         },
@@ -38,10 +38,10 @@
           "name": "【华悦居】复式亲子套房，步行长隆景区15分钟",
           "hid": "55296307",
           "type": "竞品",
-          "monthlyAvg": 266,
+          "monthlyAvg": 265,
           "monthLabel": "7月",
-          "weekday": 230,
-          "friday": 277,
+          "weekday": 234,
+          "friday": 266,
           "saturday": 332
         }
       ]
@@ -66,7 +66,7 @@
           "type": "竞品",
           "monthlyAvg": 430,
           "monthLabel": "7月",
-          "weekday": 416,
+          "weekday": 411,
           "friday": 568,
           "saturday": 468
         },
@@ -76,7 +76,7 @@
           "type": "竞品",
           "monthlyAvg": 423,
           "monthLabel": "7月",
-          "weekday": 399,
+          "weekday": 397,
           "friday": 508,
           "saturday": 608
         },
@@ -84,10 +84,10 @@
           "name": "『拾光』广州长隆地铁口&近南站&投影秋千吊床复式",
           "hid": "45183292",
           "type": "竞品",
-          "monthlyAvg": 393,
+          "monthlyAvg": 376,
           "monthLabel": "7月",
-          "weekday": 405,
-          "friday": 591,
+          "weekday": 410,
+          "friday": 450,
           "saturday": 591
         },
         {
@@ -106,7 +106,7 @@
           "type": "竞品",
           "monthlyAvg": 342,
           "monthLabel": "7月",
-          "weekday": 300,
+          "weekday": 284,
           "friday": 555,
           "saturday": 555
         },
@@ -114,7 +114,7 @@
           "name": "宫崎峻之家/长隆动物园马路对面/汉溪长隆双地铁口K11/近南站大学城广交会/亲子公寓/可月租长租",
           "hid": "330433",
           "type": "竞品",
-          "monthlyAvg": 328,
+          "monthlyAvg": 337,
           "monthLabel": "7月",
           "weekday": 312,
           "friday": 363,
@@ -152,9 +152,9 @@
           "type": "竞品",
           "monthlyAvg": 605,
           "monthLabel": "7月",
-          "weekday": 575,
+          "weekday": 573,
           "friday": 492,
-          "saturday": 818
+          "saturday": 898
         },
         {
           "name": "『拾光』广州长隆地铁口&广交会&网红灰系投影Loft两房加客厅有床（投影麻将机）",
@@ -162,7 +162,7 @@
           "type": "竞品",
           "monthlyAvg": 404,
           "monthLabel": "7月",
-          "weekday": 405,
+          "weekday": 420,
           "friday": 838,
           "saturday": 591
         },
@@ -172,7 +172,7 @@
           "type": "竞品",
           "monthlyAvg": 387,
           "monthLabel": "7月",
-          "weekday": 328,
+          "weekday": 352,
           "friday": 518,
           "saturday": 498
         },
@@ -192,7 +192,7 @@
           "type": "竞品",
           "monthlyAvg": 361,
           "monthLabel": "7月",
-          "weekday": 348,
+          "weekday": 368,
           "friday": 418,
           "saturday": 555
         },
@@ -202,7 +202,7 @@
           "type": "竞品",
           "monthlyAvg": 317,
           "monthLabel": "7月",
-          "weekday": 355,
+          "weekday": 361,
           "friday": 436,
           "saturday": 436
         },
@@ -231,11 +231,11 @@
   ],
   "date_range": {
     "start": "2026-07-21",
-    "end": "2026-08-04"
+    "end": "2026-08-05"
   },
   "latest_week": {
-    "start": "2026-07-29",
-    "end": "2026-08-04"
+    "start": "2026-07-30",
+    "end": "2026-08-05"
   },
   "month_label": "7月均价"
 }
