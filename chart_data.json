@@ -81,12 +81,22 @@
           "saturday": 0
         },
         {
+          "name": "洮源居(汉溪长隆地铁站店)精品双大床房+高清巨幕投影+洗衣机",
+          "hid": "68912325",
+          "type": "竞品",
+          "monthlyAvg": 315,
+          "monthLabel": "8月",
+          "weekday": 300,
+          "friday": 352,
+          "saturday": 352
+        },
+        {
           "name": "【贰】近长隆欢乐世界 长隆野生动物园 长隆大马戏 长隆地铁站 近广州南站 loft双床房 投影广交会",
           "hid": "84391162",
           "type": "本品",
-          "monthlyAvg": 276,
+          "monthlyAvg": 283,
           "monthLabel": "8月",
-          "weekday": 276,
+          "weekday": 283,
           "friday": 0,
           "saturday": 0
         },
@@ -114,21 +124,11 @@
           "name": "私享家服务式公寓(广州汉溪长隆地铁站店)复式悠享大床房（洗衣机丨冰箱丨宽敞明亮丨落地窗）",
           "hid": "39991491",
           "type": "竞品",
-          "monthlyAvg": 0,
+          "monthlyAvg": 187,
           "monthLabel": "8月",
-          "weekday": 0,
-          "friday": 0,
-          "saturday": 0
-        },
-        {
-          "name": "洮源居(汉溪长隆地铁站店)精品双大床房+高清巨幕投影+洗衣机",
-          "hid": "68912325",
-          "type": "竞品",
-          "monthlyAvg": 0,
-          "monthLabel": "8月",
-          "weekday": 0,
-          "friday": 0,
-          "saturday": 0
+          "weekday": 175,
+          "friday": 216,
+          "saturday": 216
         },
         {
           "name": "宫崎峻之家/长隆动物园马路对面/汉溪长隆双地铁口K11/近南站大学城广交会/亲子公寓/可月租长租",
@@ -170,11 +170,11 @@
           "name": "洮源居(汉溪长隆地铁站店)奶油复式三床房+高清巨幕投影+洗衣机",
           "hid": "68912331",
           "type": "竞品",
-          "monthlyAvg": 332,
+          "monthlyAvg": 330,
           "monthLabel": "8月",
           "weekday": 315,
           "friday": 366,
-          "saturday": 0
+          "saturday": 366
         },
         {
           "name": "广州长隆景区·新春寒假【秋日奶油】独立两居室可住6人/千元投影+超大餐桌/长隆野生动物园",
@@ -197,6 +197,16 @@
           "saturday": 0
         },
         {
+          "name": "华悦居公寓(汉溪长隆地铁站店)复式两房三床家庭套房",
+          "hid": "64837258",
+          "type": "竞品",
+          "monthlyAvg": 290,
+          "monthLabel": "8月",
+          "weekday": 277,
+          "friday": 313,
+          "saturday": 328
+        },
+        {
           "name": "骑士/走路到长隆/双地铁/广交会/南站/大学城宜家/精致亲子loft/",
           "hid": "5624467",
           "type": "竞品",
@@ -214,16 +224,6 @@
           "monthLabel": "8月",
           "weekday": 204,
           "friday": 288,
-          "saturday": 0
-        },
-        {
-          "name": "华悦居公寓(汉溪长隆地铁站店)复式两房三床家庭套房",
-          "hid": "64837258",
-          "type": "竞品",
-          "monthlyAvg": 0,
-          "monthLabel": "8月",
-          "weekday": 0,
-          "friday": 0,
           "saturday": 0
         }
       ]
