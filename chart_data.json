@@ -121,24 +121,24 @@
           "saturday": 499
         },
         {
-          "name": "洮源居(汉溪长隆地铁站店)精品双大床房+高清巨幕投影+洗衣机",
-          "hid": "68912325",
-          "type": "竞品",
-          "monthlyAvg": 197,
-          "monthLabel": "8月",
-          "weekday": 197,
-          "friday": 197,
-          "saturday": 197
-        },
-        {
           "name": "私享家服务式公寓(广州汉溪长隆地铁站店)复式悠享大床房（洗衣机丨冰箱丨宽敞明亮丨落地窗）",
           "hid": "39991491",
           "type": "竞品",
-          "monthlyAvg": 187,
+          "monthlyAvg": 0,
           "monthLabel": "8月",
           "weekday": 187,
           "friday": 187,
           "saturday": 187
+        },
+        {
+          "name": "洮源居(汉溪长隆地铁站店)精品双大床房+高清巨幕投影+洗衣机",
+          "hid": "68912325",
+          "type": "竞品",
+          "monthlyAvg": 0,
+          "monthLabel": "8月",
+          "weekday": 197,
+          "friday": 197,
+          "saturday": 197
         }
       ]
     },
@@ -210,7 +210,7 @@
           "name": "华悦居公寓(汉溪长隆地铁站店)复式两房三床家庭套房",
           "hid": "64837258",
           "type": "竞品",
-          "monthlyAvg": 237,
+          "monthlyAvg": 0,
           "monthLabel": "8月",
           "weekday": 237,
           "friday": 237,
@@ -220,7 +220,7 @@
           "name": "洮源居(汉溪长隆地铁站店)奶油复式三床房+高清巨幕投影+洗衣机",
           "hid": "68912331",
           "type": "竞品",
-          "monthlyAvg": 209,
+          "monthlyAvg": 0,
           "monthLabel": "8月",
           "weekday": 209,
           "friday": 209,
