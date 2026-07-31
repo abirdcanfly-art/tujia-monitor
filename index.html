@@ -111,7 +111,7 @@ td,th{padding:4px 5px;font-size:10px}
       rows += '<tr' + rc + '>' +
         '<td class="rank"><span class="badge ' + badgeCls + '">' + (i+1) + '</span></td>' +
         '<td class="name" title="' + r.name.replace(/"/g,'&quot;') + '">' + r.name + '</td>' +
-        '<td class="bar-cell"><div class="bar-wrap"><div class="bar" style="width:' + pct.toFixed(1) + '%"></div><span class="bar-val">¥' + r.monthlyAvg + '</span></div></td>' +
+        '<td class="bar-cell"><div class="bar-wrap"><div class="bar" style="width:' + pct.toFixed(1) + '%"></div><span class="bar-val">' + (r.monthlyAvg ? '¥' + r.monthlyAvg : '—') + '</span></div></td>' +
         '<td class="price">' + (r.weekday ? '¥' + r.weekday : '-') + '</td>' +
         '<td class="price">' + (r.friday ? '¥' + r.friday : '-') + '</td>' +
         '<td class="price">' + (r.saturday ? '¥' + r.saturday : '-') + '</td>' +
