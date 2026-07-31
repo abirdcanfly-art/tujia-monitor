@@ -126,9 +126,9 @@
           "type": "竞品",
           "monthlyAvg": 0,
           "monthLabel": "8月",
-          "weekday": 187,
-          "friday": 187,
-          "saturday": 187
+          "weekday": 0,
+          "friday": 0,
+          "saturday": 0
         },
         {
           "name": "洮源居(汉溪长隆地铁站店)精品双大床房+高清巨幕投影+洗衣机",
@@ -136,9 +136,9 @@
           "type": "竞品",
           "monthlyAvg": 0,
           "monthLabel": "8月",
-          "weekday": 197,
-          "friday": 197,
-          "saturday": 197
+          "weekday": 0,
+          "friday": 0,
+          "saturday": 0
         }
       ]
     },
@@ -212,9 +212,9 @@
           "type": "竞品",
           "monthlyAvg": 0,
           "monthLabel": "8月",
-          "weekday": 237,
-          "friday": 237,
-          "saturday": 237
+          "weekday": 0,
+          "friday": 0,
+          "saturday": 0
         },
         {
           "name": "洮源居(汉溪长隆地铁站店)奶油复式三床房+高清巨幕投影+洗衣机",
@@ -222,9 +222,9 @@
           "type": "竞品",
           "monthlyAvg": 0,
           "monthLabel": "8月",
-          "weekday": 209,
-          "friday": 209,
-          "saturday": 209
+          "weekday": 0,
+          "friday": 0,
+          "saturday": 0
         }
       ]
     }
