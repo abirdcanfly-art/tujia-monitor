@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>竞品价格对标 · 途家民宿监测</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#f0f4f8;font-family:-apple-system,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;padding:16px 20px;color:#1a202c}
@@ -43,6 +44,11 @@ tr.self .price{color:#059669;font-weight:600}
 .info-item{background:#fff;border:1px solid #e8edf3;border-radius:10px;padding:8px 14px;font-size:12px}
 .info-item .label{color:#94a3b8;font-size:10px;margin-bottom:1px}
 .info-item .val{color:#1e293b;font-weight:600}
+.tabs{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tab{background:#fff;border:1px solid #e8edf3;border-radius:10px;padding:8px 16px;font-size:13px;color:#475569;cursor:pointer;font-family:inherit}
+.tab.active{background:#059669;color:#fff;border-color:#059669}
+.tab:not(.active):hover{background:#f8fafc}
+#trend-chart{min-height:360px}
 
 @media(max-width:768px){
 body{padding:10px 12px}
@@ -65,9 +71,19 @@ td,th{padding:4px 5px;font-size:10px}
   <h1>竞品价格对标</h1>
   <div class="sub">途家民宿价格监测</div>
 </div>
-<div id="info"></div>
-<div id="app">
-  <div class="error" id="loading">加载中...</div>
+<div class="tabs">
+  <button class="tab active" data-tab="overview">竞品价格对标</button>
+  <button class="tab" data-tab="trend">月价格跟踪</button>
+</div>
+<div id="view-overview">
+  <div id="info"></div>
+  <div id="app">
+    <div class="error" id="loading">加载中...</div>
+  </div>
+</div>
+<div id="view-trend" style="display:none">
+  <div id="trend-info"></div>
+  <div id="trend-chart" style="width:100%;height:520px"></div>
 </div>
 <div class="footer">数据来源：途家 App API · 每日自动采集</div>
 <script>
@@ -141,6 +157,115 @@ td,th{padding:4px 5px;font-size:10px}
     cards.forEach(function(c){ document.getElementById('app').appendChild(c); });
   }
 })();
+
+// ---------- 月价格跟踪看板 ----------
+var trendInit = false;
+
+function shortName(n){
+  n = String(n || '').split('/')[0];
+  return n.length > 14 ? n.slice(0, 14) + '…' : n;
+}
+
+function initTrend(){
+  var holder = document.getElementById('trend-chart');
+  if (typeof echarts === 'undefined') {
+    document.getElementById('trend-info').innerHTML =
+      '<div class="error">ECharts 加载失败（需联网加载 CDN）</div>';
+    trendInit = true;
+    return;
+  }
+  if (trendInit) {
+    if (window.trendChart) { window.trendChart.resize(); }
+    return;
+  }
+  fetch('trend_data.json').then(function(r){
+    if (!r.ok) { throw new Error('HTTP ' + r.status); }
+    return r.json();
+  }).then(function(D){
+    trendInit = true;
+    if (!D || !D.rooms || !D.rooms.length) {
+      document.getElementById('trend-info').innerHTML =
+        '<div class="error">trend_data.json 无数据</div>';
+      return;
+    }
+    var range = D.date_range || {};
+    document.getElementById('trend-info').innerHTML =
+      '<div class="info-bar">' +
+      '<div class="info-item"><div class="label">月份</div><div class="val">' + (D.month_label || D.month || '') + '</div></div>' +
+      '<div class="info-item"><div class="label">日期范围</div><div class="val">' + (range.start || '') + ' ~ ' + (range.end || '') + '</div></div>' +
+      '<div class="info-item"><div class="label">房型</div><div class="val">' + D.rooms.length + ' 个</div></div>' +
+      '</div>';
+
+    var dates = [];
+    D.rooms.forEach(function(r){
+      r.prices.forEach(function(p){ if (dates.indexOf(p.date) < 0) { dates.push(p.date); } });
+    });
+    dates.sort();
+
+    var rooms = D.rooms;
+    var series = rooms.map(function(r){
+      var isSelf = r.type === '本品';
+      var map = {};
+      r.prices.forEach(function(p){ map[p.date] = p.price; });
+      return {
+        name: shortName(r.name),
+        full: r.name,
+        type: 'line',
+        smooth: false,
+        symbol: 'circle',
+        symbolSize: 5,
+        connectNulls: true,
+        lineStyle: { width: isSelf ? 3 : 1.5 },
+        itemStyle: { color: isSelf ? '#059669' : '#3b82f6' },
+        emphasis: { focus: 'series' },
+        data: dates.map(function(d){ return (map[d] !== undefined) ? map[d] : null; })
+      };
+    });
+
+    window.trendChart = echarts.init(holder);
+    window.trendChart.setOption({
+      tooltip: {
+        trigger: 'item',
+        formatter: function(p){
+          return '<b>' + p.seriesName + '</b><br/>' + p.axisValue + '：¥' + p.value;
+        }
+      },
+      legend: {
+        type: 'scroll',
+        top: 0,
+        textStyle: { fontSize: 11 },
+        data: series.map(function(s){ return s.name; })
+      },
+      grid: { left: 50, right: 20, top: 60, bottom: 40 },
+      xAxis: {
+        type: 'category',
+        data: dates,
+        axisLabel: { formatter: function(v){ return String(v).slice(5); } }
+      },
+      yAxis: { type: 'value', name: '价格(¥)', nameTextStyle: { fontSize: 11 } },
+      series: series
+    });
+  }).catch(function(){
+    document.getElementById('trend-info').innerHTML =
+      '<div class="error">trend_data.json 加载失败</div>';
+    trendInit = true;
+  });
+}
+
+document.querySelectorAll('.tab').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.tab').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+    var tab = btn.dataset.tab;
+    document.getElementById('view-overview').style.display = (tab === 'overview') ? '' : 'none';
+    document.getElementById('view-trend').style.display = (tab === 'trend') ? '' : 'none';
+    if (tab === 'trend') { initTrend(); }
+  });
+});
+
+window.addEventListener('resize', function(){
+  if (window.trendChart) { window.trendChart.resize(); }
+});
 </script>
 </body>
 </html>
