@@ -216,7 +216,7 @@ function initTrend(){
         symbolSize: 5,
         connectNulls: true,
         lineStyle: { width: isSelf ? 3 : 1.5 },
-        itemStyle: { color: isSelf ? '#059669' : '#3b82f6' },
+        itemStyle: { color: isSelf ? '#059669' : '#9ca3af' },
         emphasis: { focus: 'series' },
         data: dates.map(function(d){ return (map[d] !== undefined) ? map[d] : null; })
       };
@@ -225,24 +225,27 @@ function initTrend(){
     window.trendChart = echarts.init(holder);
     window.trendChart.setOption({
       tooltip: {
-        trigger: 'item',
-        formatter: function(p){
-          return '<b>' + p.seriesName + '</b><br/>' + p.axisValue + '：¥' + p.value;
+        trigger: 'axis',
+        confine: true,
+        axisPointer: { type: 'line' },
+        formatter: function(params){
+          var first = params[0] || {};
+          var date = first.axisValueLabel || first.axisValue || '';
+          var s = '<b>' + date + '</b>';
+          params.forEach(function(p){
+            if (p.value === null || p.value === undefined) { return; }
+            s += '<br/>' + p.marker + p.seriesName + '：<b>¥' + p.value + '</b>';
+          });
+          return s;
         }
       },
-      legend: {
-        type: 'scroll',
-        top: 0,
-        textStyle: { fontSize: 11 },
-        data: series.map(function(s){ return s.name; })
-      },
-      grid: { left: 50, right: 20, top: 60, bottom: 40 },
+      grid: { left: 50, right: 20, top: 30, bottom: 40 },
       xAxis: {
         type: 'category',
         data: dates,
         axisLabel: { formatter: function(v){ return String(v).slice(5); } }
       },
-      yAxis: { type: 'value', name: '价格(¥)', nameTextStyle: { fontSize: 11 } },
+      yAxis: { type: 'value', name: '价格', nameTextStyle: { fontSize: 11 } },
       series: series
     });
   }).catch(function(){
