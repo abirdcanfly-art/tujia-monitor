@@ -215,9 +215,9 @@ function initTrend(){
         symbol: 'circle',
         symbolSize: 5,
         connectNulls: true,
-        lineStyle: { width: isSelf ? 3 : 1.5 },
+        lineStyle: { width: isSelf ? 3 : 1.5, opacity: 0.55 },
         itemStyle: { color: isSelf ? '#059669' : '#9ca3af' },
-        emphasis: { focus: 'series' },
+        emphasis: { focus: 'series', lineStyle: { opacity: 1 } },
         data: dates.map(function(d){ return (map[d] !== undefined) ? map[d] : null; })
       };
     });
