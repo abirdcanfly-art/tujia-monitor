@@ -208,7 +208,7 @@ function initTrend(){
       var map = {};
       r.prices.forEach(function(p){ map[p.date] = p.price; });
       return {
-        name: shortName(r.name),
+        name: (r.group || '') + '组-' + shortName(r.name),
         full: r.name,
         type: 'line',
         smooth: false,
@@ -225,18 +225,11 @@ function initTrend(){
     window.trendChart = echarts.init(holder);
     window.trendChart.setOption({
       tooltip: {
-        trigger: 'axis',
+        trigger: 'item',
         confine: true,
-        axisPointer: { type: 'line' },
-        formatter: function(params){
-          var first = params[0] || {};
-          var date = first.axisValueLabel || first.axisValue || '';
-          var s = '<b>' + date + '</b>';
-          params.forEach(function(p){
-            if (p.value === null || p.value === undefined) { return; }
-            s += '<br/>' + p.marker + p.seriesName + '：<b>¥' + p.value + '</b>';
-          });
-          return s;
+        formatter: function(p){
+          var date = p.axisValueLabel || p.name || '';
+          return '<b>' + p.seriesName + '</b><br/>' + date + '：¥' + p.value;
         }
       },
       grid: { left: 50, right: 20, top: 30, bottom: 40 },
@@ -247,6 +240,16 @@ function initTrend(){
       },
       yAxis: { type: 'value', name: '价格', nameTextStyle: { fontSize: 11 } },
       series: series
+    });
+
+    // 悬停线上任意位置(含线段中间)→ 只显示该线的 tooltip
+    window.trendChart.on('mousemove', function(ev){
+      if (ev.componentType === 'series' && ev.seriesType === 'line') {
+        window.trendChart.dispatchAction({ type: 'showTip', seriesIndex: ev.seriesIndex, dataIndex: ev.dataIndex });
+      }
+    });
+    window.trendChart.on('mouseout', function(){
+      window.trendChart.dispatchAction({ type: 'hideTip' });
     });
   }).catch(function(){
     document.getElementById('trend-info').innerHTML =
