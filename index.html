@@ -145,11 +145,10 @@ td,th{padding:4px 5px;font-size:10px}
     cards.push(card);
   });
 
-  // 1606 + 1019 左列, 1707 右列
-  if (groups.length >= 3) {
-    left.appendChild(cards[0]);
-    left.appendChild(cards[2]);
-    right.appendChild(cards[1]);
+  // 两列均衡拆分（组数增加时也正常显示）
+  if (cards.length > 1) {
+    var half = Math.ceil(cards.length / 2);
+    cards.forEach(function(c, i){ (i < half ? left : right).appendChild(c); });
     wrap.appendChild(left);
     wrap.appendChild(right);
     document.getElementById('app').appendChild(wrap);

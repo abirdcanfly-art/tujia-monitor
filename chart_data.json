@@ -20,7 +20,7 @@
           "type": "竞品",
           "monthlyAvg": 249,
           "monthLabel": "8月",
-          "weekday": 220,
+          "weekday": 218,
           "friday": 241,
           "saturday": 285
         },
@@ -30,7 +30,7 @@
           "type": "竞品",
           "monthlyAvg": 248,
           "monthLabel": "8月",
-          "weekday": 218,
+          "weekday": 215,
           "friday": 249,
           "saturday": 291
         },
@@ -40,7 +40,7 @@
           "type": "本品",
           "monthlyAvg": 246,
           "monthLabel": "8月",
-          "weekday": 241,
+          "weekday": 242,
           "friday": 264,
           "saturday": 269
         }
@@ -76,7 +76,7 @@
           "type": "竞品",
           "monthlyAvg": 368,
           "monthLabel": "8月",
-          "weekday": 344,
+          "weekday": 340,
           "friday": 416,
           "saturday": 416
         },
@@ -227,15 +227,71 @@
           "saturday": 0
         }
       ]
+    },
+    {
+      "group": "815",
+      "title": "对标组 815 · 单间大床房",
+      "rooms": [
+        {
+          "name": "【星颐国际公寓】「波西米亚风格·大床房」秋千｜阳台｜投影仪｜步行5分钟即达长隆动物园北门｜洗衣机",
+          "hid": "77912707",
+          "type": "竞品",
+          "monthlyAvg": 273,
+          "monthLabel": "8月",
+          "weekday": 269,
+          "friday": 0,
+          "saturday": 288
+        },
+        {
+          "name": "【伍】近长隆欢乐世界 长隆野生动物园 长隆大马戏水上乐园飞鸟乐园 长隆地铁站 近广州南站 单间大床房",
+          "hid": "91559602",
+          "type": "本品",
+          "monthlyAvg": 226,
+          "monthLabel": "8月",
+          "weekday": 220,
+          "friday": 238,
+          "saturday": 238
+        },
+        {
+          "name": "暖气·【白房子·曦光】近地铁浴缸巨幕投影大床房&长隆野生动物世界&南村万博&四海城&番禺万达广场",
+          "hid": "66544054",
+          "type": "竞品",
+          "monthlyAvg": 183,
+          "monthLabel": "8月",
+          "weekday": 170,
+          "friday": 196,
+          "saturday": 224
+        },
+        {
+          "name": "【飘】广州长隆野生动物园/步行可达长隆/汉溪长隆地铁/商务休闲/巨幕投影/近广州南站",
+          "hid": "75836917",
+          "type": "竞品",
+          "monthlyAvg": 181,
+          "monthLabel": "8月",
+          "weekday": 163,
+          "friday": 218,
+          "saturday": 218
+        },
+        {
+          "name": "【月】广州长隆野生动物园/步行可达长隆/汉溪长隆地铁/商务休闲/巨幕投影/近广州南站",
+          "hid": "70171855",
+          "type": "竞品",
+          "monthlyAvg": 179,
+          "monthLabel": "8月",
+          "weekday": 163,
+          "friday": 218,
+          "saturday": 218
+        }
+      ]
     }
   ],
   "date_range": {
     "start": "2026-07-21",
-    "end": "2026-08-10"
+    "end": "2026-08-11"
   },
   "latest_week": {
-    "start": "2026-08-04",
-    "end": "2026-08-10"
+    "start": "2026-08-05",
+    "end": "2026-08-11"
   },
   "month_label": "8月均价"
 }
