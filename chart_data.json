@@ -10,7 +10,7 @@
           "type": "竞品",
           "monthlyAvg": 306,
           "monthLabel": "8月",
-          "weekday": 275,
+          "weekday": 274,
           "friday": 328,
           "saturday": 328
         },
@@ -20,7 +20,7 @@
           "type": "本品",
           "monthlyAvg": 284,
           "monthLabel": "8月",
-          "weekday": 299,
+          "weekday": 300,
           "friday": 317,
           "saturday": 317
         },
@@ -30,7 +30,7 @@
           "type": "竞品",
           "monthlyAvg": 245,
           "monthLabel": "8月",
-          "weekday": 191,
+          "weekday": 192,
           "friday": 207,
           "saturday": 253
         },
@@ -66,7 +66,7 @@
           "type": "竞品",
           "monthlyAvg": 379,
           "monthLabel": "8月",
-          "weekday": 319,
+          "weekday": 306,
           "friday": 0,
           "saturday": 448
         },
@@ -86,7 +86,7 @@
           "type": "本品",
           "monthlyAvg": 321,
           "monthLabel": "8月",
-          "weekday": 326,
+          "weekday": 328,
           "friday": 332,
           "saturday": 332
         },
@@ -96,7 +96,7 @@
           "type": "竞品",
           "monthlyAvg": 294,
           "monthLabel": "8月",
-          "weekday": 196,
+          "weekday": 195,
           "friday": 282,
           "saturday": 360
         },
@@ -106,7 +106,7 @@
           "type": "竞品",
           "monthlyAvg": 287,
           "monthLabel": "8月",
-          "weekday": 245,
+          "weekday": 239,
           "friday": 312,
           "saturday": 0
         },
@@ -116,7 +116,7 @@
           "type": "竞品",
           "monthlyAvg": 217,
           "monthLabel": "8月",
-          "weekday": 200,
+          "weekday": 208,
           "friday": 234,
           "saturday": 234
         },
@@ -126,7 +126,7 @@
           "type": "竞品",
           "monthlyAvg": 200,
           "monthLabel": "8月",
-          "weekday": 166,
+          "weekday": 164,
           "friday": 208,
           "saturday": 208
         },
@@ -152,7 +152,7 @@
           "type": "竞品",
           "monthlyAvg": 472,
           "monthLabel": "8月",
-          "weekday": 340,
+          "weekday": 315,
           "friday": 0,
           "saturday": 0
         },
@@ -172,7 +172,7 @@
           "type": "本品",
           "monthlyAvg": 331,
           "monthLabel": "8月",
-          "weekday": 334,
+          "weekday": 337,
           "friday": 371,
           "saturday": 371
         },
@@ -182,7 +182,7 @@
           "type": "竞品",
           "monthlyAvg": 315,
           "monthLabel": "8月",
-          "weekday": 250,
+          "weekday": 246,
           "friday": 368,
           "saturday": 468
         },
@@ -192,7 +192,7 @@
           "type": "竞品",
           "monthlyAvg": 302,
           "monthLabel": "8月",
-          "weekday": 219,
+          "weekday": 218,
           "friday": 262,
           "saturday": 279
         },
@@ -212,7 +212,7 @@
           "type": "竞品",
           "monthlyAvg": 281,
           "monthLabel": "8月",
-          "weekday": 221,
+          "weekday": 220,
           "friday": 306,
           "saturday": 306
         },
@@ -222,7 +222,7 @@
           "type": "竞品",
           "monthlyAvg": 234,
           "monthLabel": "8月",
-          "weekday": 203,
+          "weekday": 208,
           "friday": 243,
           "saturday": 243
         }
@@ -238,7 +238,7 @@
           "type": "竞品",
           "monthlyAvg": 255,
           "monthLabel": "8月",
-          "weekday": 220,
+          "weekday": 222,
           "friday": 263,
           "saturday": 273
         },
@@ -248,7 +248,7 @@
           "type": "本品",
           "monthlyAvg": 197,
           "monthLabel": "8月",
-          "weekday": 191,
+          "weekday": 193,
           "friday": 202,
           "saturday": 202
         },
@@ -268,7 +268,7 @@
           "type": "竞品",
           "monthlyAvg": 190,
           "monthLabel": "8月",
-          "weekday": 170,
+          "weekday": 166,
           "friday": 239,
           "saturday": 239
         },
@@ -283,15 +283,71 @@
           "saturday": 0
         }
       ]
+    },
+    {
+      "group": "宋小姐",
+      "title": "宋小姐组 · 长隆法式loft",
+      "rooms": [
+        {
+          "name": "长隆野生动物园/长隆欢乐世界/长隆大马戏/麻将/浴缸/广州南站/高清投影/法式loft/汉溪长隆地铁",
+          "hid": "77322265",
+          "type": "竞品",
+          "monthlyAvg": 618,
+          "monthLabel": "8月",
+          "weekday": 487,
+          "friday": 666,
+          "saturday": 666
+        },
+        {
+          "name": "长隆野生动物园/长隆欢乐世界/长隆大马戏/广州南站/长隆地铁口/麻将/桌球/投影/法式风loft浴缸",
+          "hid": "76425724",
+          "type": "竞品",
+          "monthlyAvg": 595,
+          "monthLabel": "8月",
+          "weekday": 614,
+          "friday": 666,
+          "saturday": 0
+        },
+        {
+          "name": "长隆欢乐世界/长隆野生动物园/长隆大马戏/长隆地铁口/广州南站/麻将/桌球/投影/浴缸/法式loft",
+          "hid": "76786570",
+          "type": "竞品",
+          "monthlyAvg": 586,
+          "monthLabel": "8月",
+          "weekday": 589,
+          "friday": 0,
+          "saturday": 0
+        },
+        {
+          "name": "长隆野生动物园/长隆欢乐世界/长隆大马戏/广州南站/汉溪长隆地铁站/麻将/桌球/法式loft/投影仪",
+          "hid": "81861514",
+          "type": "竞品",
+          "monthlyAvg": 585,
+          "monthLabel": "8月",
+          "weekday": 572,
+          "friday": 583,
+          "saturday": 666
+        },
+        {
+          "name": "近长隆欢乐世界/长隆野生动物园/长隆大马戏/长隆地铁口/广州南站/麻将/广州塔/投影/法式loft",
+          "hid": "75431272",
+          "type": "竞品",
+          "monthlyAvg": 512,
+          "monthLabel": "8月",
+          "weekday": 471,
+          "friday": 411,
+          "saturday": 576
+        }
+      ]
     }
   ],
   "date_range": {
     "start": "2026-07-21",
-    "end": "2026-09-01"
+    "end": "2026-09-02"
   },
   "latest_week": {
-    "start": "2026-08-26",
-    "end": "2026-09-01"
+    "start": "2026-08-27",
+    "end": "2026-09-02"
   },
   "month_label": "8月均价"
 }
