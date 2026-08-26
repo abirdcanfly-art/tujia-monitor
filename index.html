@@ -134,6 +134,7 @@ td,th{padding:4px 5px;font-size:10px}
     });
     var card = document.createElement('div');
     card.className = 'card';
+    card.dataset.group = g.group;
     card.innerHTML =
       '<div class="card-hd"><span class="card-tag">' + g.group + '</span>' + (g.title || '对标组 ' + g.group) + '</div>' +
       '<div class="table-wrap"><table><thead><tr>' +
@@ -144,10 +145,19 @@ td,th{padding:4px 5px;font-size:10px}
     cards.push(card);
   });
 
-  // 两列均衡拆分（组数增加时也正常显示）
+  // 两列均衡拆分（宋小姐组固定左列底部）
   if (cards.length > 1) {
-    var half = Math.ceil(cards.length / 2);
-    cards.forEach(function(c, i){ (i < half ? left : right).appendChild(c); });
+    var song = null, rest = [];
+    cards.forEach(function(c){
+      if (c.dataset && c.dataset.group === '宋小姐') { song = c; }
+      else { rest.push(c); }
+    });
+    var half = Math.ceil(rest.length / 2);
+    if (song) {
+      rest.splice(Math.min(half + 1, rest.length), 0, song);
+      half += 2;
+    }
+    rest.forEach(function(c, i){ (i < half ? left : right).appendChild(c); });
     wrap.appendChild(left);
     wrap.appendChild(right);
     document.getElementById('app').appendChild(wrap);
