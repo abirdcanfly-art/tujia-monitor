@@ -145,19 +145,18 @@ td,th{padding:4px 5px;font-size:10px}
     cards.push(card);
   });
 
-  // 两列均衡拆分（宋小姐组固定左列底部）
+  // 两列均衡拆分（宋小姐固定左列底部，1019 固定右列）
   if (cards.length > 1) {
-    var song = null, rest = [];
+    var song = null, g1019 = null, rest = [];
     cards.forEach(function(c){
       if (c.dataset && c.dataset.group === '宋小姐') { song = c; }
+      else if (c.dataset && c.dataset.group === '1019') { g1019 = c; }
       else { rest.push(c); }
     });
     var half = Math.ceil(rest.length / 2);
-    if (song) {
-      rest.splice(Math.min(half + 1, rest.length), 0, song);
-      half += 2;
-    }
     rest.forEach(function(c, i){ (i < half ? left : right).appendChild(c); });
+    if (song) { left.appendChild(song); }
+    if (g1019) { right.insertBefore(g1019, right.firstChild); }
     wrap.appendChild(left);
     wrap.appendChild(right);
     document.getElementById('app').appendChild(wrap);
