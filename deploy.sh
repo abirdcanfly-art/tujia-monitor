@@ -10,4 +10,5 @@ python "../数据分析/chart_data.py" 2>&1
 # Commit and push
 git add -A
 git commit -m "daily update: $(date +%Y-%m-%d)"
-git push
+# Pick a reachable github.com IP before pushing (github.com is intermittently reset)
+python "../tujia_monitor/github_push.py" --repo .
