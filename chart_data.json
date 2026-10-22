@@ -8,23 +8,23 @@
           "name": "轻奢复式双床套房*长隆地铁口*步行15分钟长隆动物园*大马戏*欢乐世界",
           "hid": "15806169",
           "type": "竞品",
-          "today": 166.0,
+          "today": 280.0,
           "monthlyAvg": 242,
           "monthLabel": "10月",
-          "weekday": 161,
-          "friday": 243,
-          "saturday": 295
+          "weekday": 160,
+          "friday": 280,
+          "saturday": 348
         },
         {
           "name": "【华悦居】复式亲子套房，步行长隆景区15分钟",
           "hid": "55296307",
           "type": "竞品",
-          "today": 152.0,
-          "monthlyAvg": 238,
+          "today": 263.0,
+          "monthlyAvg": 239,
           "monthLabel": "10月",
-          "weekday": 154,
-          "friday": 220,
-          "saturday": 298
+          "weekday": 162,
+          "friday": 263,
+          "saturday": 324
         },
         {
           "name": "【壹】长隆欢乐世界 长隆野生动物园 长隆大马戏 长隆地铁站 广州南站 loft双床房 电视情侣亲子房",
@@ -42,9 +42,9 @@
           "hid": "78799252",
           "type": "竞品",
           "today": 0.0,
-          "monthlyAvg": 378,
+          "monthlyAvg": 371,
           "monthLabel": "10月",
-          "weekday": 483,
+          "weekday": 435,
           "friday": 0,
           "saturday": 0
         }
@@ -58,44 +58,22 @@
           "name": "＜可直播可住宿＞，独特装修、高颜值又具性价比，汉溪、万博商圈、餐娱齐，近汉溪长隆地铁，拍照直播推荐！",
           "hid": "65259832",
           "type": "竞品",
-          "today": 419.0,
-          "monthlyAvg": 938,
+          "today": 538.0,
+          "monthlyAvg": 1095,
           "monthLabel": "10月",
-          "weekday": 419,
+          "weekday": 1400,
           "friday": 538,
           "saturday": 538
-        },
-        {
-          "name": "广州宠伴猫咖式民宿/近汉溪长隆地铁站/ins奶油风",
-          "hid": "68417193",
-          "type": "竞品",
-          "today": 358.0,
-          "monthlyAvg": 369,
-          "monthLabel": "10月",
-          "weekday": 337,
-          "friday": 0,
-          "saturday": 0
         },
         {
           "name": "私享家服务式公寓(广州汉溪长隆地铁站店)复式悠享大床房（洗衣机丨冰箱丨宽敞明亮丨落地窗）",
           "hid": "39991491",
           "type": "竞品",
-          "today": 251.0,
-          "monthlyAvg": 217,
+          "today": 324.0,
+          "monthlyAvg": 216,
           "monthLabel": "10月",
-          "weekday": 210,
-          "friday": 303,
-          "saturday": 303
-        },
-        {
-          "name": "【梵小姐の屋】长隆欢乐世界对面 豪华 长隆广交会南站机场大学城长隆地铁站",
-          "hid": "51764302",
-          "type": "竞品",
-          "today": 229.0,
-          "monthlyAvg": 427,
-          "monthLabel": "10月",
-          "weekday": 230,
-          "friday": 0,
+          "weekday": 209,
+          "friday": 324,
           "saturday": 0
         },
         {
@@ -103,9 +81,20 @@
           "hid": "84391162",
           "type": "本品",
           "today": 0.0,
-          "monthlyAvg": 346,
+          "monthlyAvg": 354,
           "monthLabel": "10月",
-          "weekday": 312,
+          "weekday": 345,
+          "friday": 0,
+          "saturday": 0
+        },
+        {
+          "name": "广州宠伴猫咖式民宿/近汉溪长隆地铁站/ins奶油风",
+          "hid": "68417193",
+          "type": "竞品",
+          "today": 0.0,
+          "monthlyAvg": 371,
+          "monthLabel": "10月",
+          "weekday": 346,
           "friday": 0,
           "saturday": 0
         },
@@ -114,9 +103,9 @@
           "hid": "18230801",
           "type": "竞品",
           "today": 0.0,
-          "monthlyAvg": 364,
+          "monthlyAvg": 354,
           "monthLabel": "10月",
-          "weekday": 213,
+          "weekday": 212,
           "friday": 0,
           "saturday": 0
         },
@@ -132,11 +121,22 @@
           "saturday": 0
         },
         {
+          "name": "【梵小姐の屋】长隆欢乐世界对面 豪华 长隆广交会南站机场大学城长隆地铁站",
+          "hid": "51764302",
+          "type": "竞品",
+          "today": 0.0,
+          "monthlyAvg": 427,
+          "monthLabel": "10月",
+          "weekday": 232,
+          "friday": 0,
+          "saturday": 0
+        },
+        {
           "name": "洮源居(汉溪长隆地铁站店)精品双大床房+高清巨幕投影+洗衣机",
           "hid": "68912325",
           "type": "竞品",
           "today": 0.0,
-          "monthlyAvg": 320,
+          "monthlyAvg": 319,
           "monthLabel": "10月",
           "weekday": 288,
           "friday": 0,
@@ -160,70 +160,70 @@
       "title": "对标组 1019 · 复式·46m² 可住6人",
       "rooms": [
         {
-          "name": "【叁】近长隆欢乐世界 长隆野生动物园 长隆大马戏 长隆地铁站 近广州南站 loft三床房 投影广交会",
-          "hid": "86964919",
-          "type": "本品",
-          "today": 332.0,
-          "monthlyAvg": 419,
-          "monthLabel": "10月",
-          "weekday": 335,
-          "friday": 357,
-          "saturday": 0
-        },
-        {
-          "name": "投影滑滑梯波波池乐两房一厅三床两卫·陆",
-          "hid": "73352872",
-          "type": "竞品",
-          "today": 330.0,
-          "monthlyAvg": 457,
-          "monthLabel": "10月",
-          "weekday": 318,
-          "friday": 431,
-          "saturday": 0
-        },
-        {
-          "name": "洮源居(汉溪长隆地铁站店)奶油复式三床房+高清巨幕投影+洗衣机",
-          "hid": "68912331",
-          "type": "竞品",
-          "today": 307.0,
-          "monthlyAvg": 354,
-          "monthLabel": "10月",
-          "weekday": 307,
-          "friday": 354,
-          "saturday": 0
-        },
-        {
           "name": "『拾光』广州长隆地铁口&广交会&网红灰系投影Loft两房加客厅有床（投影麻将机）",
           "hid": "40515798",
           "type": "竞品",
-          "today": 242.0,
-          "monthlyAvg": 377,
+          "today": 433.0,
+          "monthlyAvg": 371,
           "monthLabel": "10月",
           "weekday": 244,
           "friday": 433,
           "saturday": 0
         },
         {
-          "name": "广州长隆景区·新春寒假【秋日奶油】独立两居室可住6人/千元投影+超大餐桌/长隆野生动物园",
-          "hid": "55950013",
+          "name": "投影滑滑梯波波池乐两房一厅三床两卫·陆",
+          "hid": "73352872",
           "type": "竞品",
-          "today": 238.0,
-          "monthlyAvg": 317,
+          "today": 431.0,
+          "monthlyAvg": 451,
           "monthLabel": "10月",
-          "weekday": 262,
-          "friday": 0,
+          "weekday": 310,
+          "friday": 431,
+          "saturday": 0
+        },
+        {
+          "name": "【叁】近长隆欢乐世界 长隆野生动物园 长隆大马戏 长隆地铁站 近广州南站 loft三床房 投影广交会",
+          "hid": "86964919",
+          "type": "本品",
+          "today": 357.0,
+          "monthlyAvg": 415,
+          "monthLabel": "10月",
+          "weekday": 335,
+          "friday": 357,
+          "saturday": 0
+        },
+        {
+          "name": "洮源居(汉溪长隆地铁站店)奶油复式三床房+高清巨幕投影+洗衣机",
+          "hid": "68912331",
+          "type": "竞品",
+          "today": 354.0,
+          "monthlyAvg": 353,
+          "monthLabel": "10月",
+          "weekday": 307,
+          "friday": 354,
           "saturday": 0
         },
         {
           "name": "华悦居公寓(汉溪长隆地铁站店)复式两房三床家庭套房",
           "hid": "64837258",
           "type": "竞品",
-          "today": 198.0,
-          "monthlyAvg": 342,
+          "today": 335.0,
+          "monthlyAvg": 343,
           "monthLabel": "10月",
-          "weekday": 213,
-          "friday": 293,
-          "saturday": 357
+          "weekday": 222,
+          "friday": 335,
+          "saturday": 451
+        },
+        {
+          "name": "广州长隆景区·新春寒假【秋日奶油】独立两居室可住6人/千元投影+超大餐桌/长隆野生动物园",
+          "hid": "55950013",
+          "type": "竞品",
+          "today": 0.0,
+          "monthlyAvg": 314,
+          "monthLabel": "10月",
+          "weekday": 268,
+          "friday": 0,
+          "saturday": 0
         },
         {
           "name": "【無-拾陌美宿】长隆地铁口独立三床/法式奶油风/巨幕投影/欢乐世界大马戏动物园/珠江新城南站机场",
@@ -254,37 +254,26 @@
       "title": "对标组 815 · 单间大床房",
       "rooms": [
         {
-          "name": "【星颐国际公寓】「波西米亚风格·大床房」秋千｜阳台｜投影仪｜步行5分钟即达长隆动物园北门｜洗衣机",
-          "hid": "77912707",
-          "type": "竞品",
-          "today": 211.0,
-          "monthlyAvg": 245,
-          "monthLabel": "10月",
-          "weekday": 194,
-          "friday": 0,
-          "saturday": 0
-        },
-        {
-          "name": "暖气·【白房子·曦光】近地铁浴缸巨幕投影大床房&长隆野生动物世界&南村万博&四海城&番禺万达广场",
-          "hid": "66544054",
-          "type": "竞品",
-          "today": 165.0,
-          "monthlyAvg": 164,
-          "monthLabel": "10月",
-          "weekday": 165,
-          "friday": 0,
-          "saturday": 0
-        },
-        {
           "name": "【月】广州长隆野生动物园/步行可达长隆/汉溪长隆地铁/商务休闲/巨幕投影/近广州南站",
           "hid": "70171855",
           "type": "竞品",
-          "today": 147.0,
-          "monthlyAvg": 170,
+          "today": 171.0,
+          "monthlyAvg": 169,
           "monthLabel": "10月",
           "weekday": 149,
           "friday": 171,
-          "saturday": 171
+          "saturday": 0
+        },
+        {
+          "name": "【飘】广州长隆野生动物园/步行可达长隆/汉溪长隆地铁/商务休闲/巨幕投影/近广州南站",
+          "hid": "75836917",
+          "type": "竞品",
+          "today": 171.0,
+          "monthlyAvg": 154,
+          "monthLabel": "10月",
+          "weekday": 148,
+          "friday": 171,
+          "saturday": 0
         },
         {
           "name": "【伍】近长隆欢乐世界 长隆野生动物园 长隆大马戏水上乐园飞鸟乐园 长隆地铁站 近广州南站 单间大床房",
@@ -298,14 +287,25 @@
           "saturday": 0
         },
         {
-          "name": "【飘】广州长隆野生动物园/步行可达长隆/汉溪长隆地铁/商务休闲/巨幕投影/近广州南站",
-          "hid": "75836917",
+          "name": "暖气·【白房子·曦光】近地铁浴缸巨幕投影大床房&长隆野生动物世界&南村万博&四海城&番禺万达广场",
+          "hid": "66544054",
           "type": "竞品",
           "today": 0.0,
-          "monthlyAvg": 155,
+          "monthlyAvg": 162,
           "monthLabel": "10月",
-          "weekday": 149,
-          "friday": 171,
+          "weekday": 160,
+          "friday": 0,
+          "saturday": 0
+        },
+        {
+          "name": "【星颐国际公寓】「波西米亚风格·大床房」秋千｜阳台｜投影仪｜步行5分钟即达长隆动物园北门｜洗衣机",
+          "hid": "77912707",
+          "type": "竞品",
+          "today": 0.0,
+          "monthlyAvg": 250,
+          "monthLabel": "10月",
+          "weekday": 195,
+          "friday": 0,
           "saturday": 0
         }
       ]
@@ -315,70 +315,70 @@
       "title": "宋小姐组 · 长隆法式loft",
       "rooms": [
         {
-          "name": "长隆欢乐世界/长隆野生动物园/长隆大马戏/长隆地铁口/广州南站/麻将/桌球/投影/浴缸/法式loft",
-          "hid": "76786570",
-          "type": "竞品",
-          "today": 412.0,
-          "monthlyAvg": 560,
-          "monthLabel": "10月",
-          "weekday": 540,
-          "friday": 577,
-          "saturday": 0
-        },
-        {
           "name": "长隆野生动物园/长隆欢乐世界/长隆大马戏/广州南站/长隆地铁口/麻将/桌球/投影/法式风loft浴缸",
           "hid": "76425724",
           "type": "竞品",
-          "today": 412.0,
-          "monthlyAvg": 604,
+          "today": 660.0,
+          "monthlyAvg": 596,
           "monthLabel": "10月",
-          "weekday": 540,
-          "friday": 495,
+          "weekday": 499,
+          "friday": 660,
           "saturday": 0
         },
         {
           "name": "长隆野生动物园/长隆欢乐世界/长隆大马戏/广州南站/汉溪长隆地铁站/麻将/桌球/法式loft/投影仪",
           "hid": "81861514",
           "type": "竞品",
-          "today": 386.0,
-          "monthlyAvg": 572,
+          "today": 495.0,
+          "monthlyAvg": 569,
           "monthLabel": "10月",
-          "weekday": 544,
-          "friday": 577,
+          "weekday": 582,
+          "friday": 495,
+          "saturday": 0
+        },
+        {
+          "name": "近长隆欢乐世界/长隆野生动物园/长隆大马戏/长隆地铁口/广州南站/麻将/广州塔/投影/法式loft",
+          "hid": "75431272",
+          "type": "竞品",
+          "today": 489.0,
+          "monthlyAvg": 476,
+          "monthLabel": "10月",
+          "weekday": 410,
+          "friday": 489,
+          "saturday": 0
+        },
+        {
+          "name": "长隆欢乐世界/长隆野生动物园/长隆大马戏/长隆地铁口/广州南站/麻将/桌球/投影/浴缸/法式loft",
+          "hid": "76786570",
+          "type": "竞品",
+          "today": 0.0,
+          "monthlyAvg": 539,
+          "monthLabel": "10月",
+          "weekday": 500,
+          "friday": 0,
           "saturday": 0
         },
         {
           "name": "长隆野生动物园/长隆欢乐世界/长隆大马戏/麻将/浴缸/广州南站/高清投影/法式loft/汉溪长隆地铁",
           "hid": "77322265",
           "type": "竞品",
-          "today": 247.0,
-          "monthlyAvg": 564,
+          "today": 0.0,
+          "monthlyAvg": 557,
           "monthLabel": "10月",
-          "weekday": 316,
+          "weekday": 332,
           "friday": 0,
-          "saturday": 495
-        },
-        {
-          "name": "近长隆欢乐世界/长隆野生动物园/长隆大马戏/长隆地铁口/广州南站/麻将/广州塔/投影/法式loft",
-          "hid": "75431272",
-          "type": "竞品",
-          "today": 244.0,
-          "monthlyAvg": 473,
-          "monthLabel": "10月",
-          "weekday": 378,
-          "friday": 407,
-          "saturday": 407
+          "saturday": 0
         }
       ]
     }
   ],
   "date_range": {
     "start": "2026-07-21",
-    "end": "2026-10-28"
+    "end": "2026-10-29"
   },
   "latest_week": {
-    "start": "2026-10-22",
-    "end": "2026-10-28"
+    "start": "2026-10-23",
+    "end": "2026-10-29"
   },
   "month_label": "10月均价"
 }
